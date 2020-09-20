@@ -1,8 +1,31 @@
 @media only screen and (max-width: 768px) {
   /* For mobile: */
+
+  /* Mobile Nabvar */
   nav {
     z-index: 100 !important;
   }
+  
+  /* Mobile Content */
+  .about,
+  .projects,
+  .contact {
+    grid-template-columns: auto !important;
+  }
+
+  .content {
+    margin-top: 8vw !important;
+  }
+  
+  /* Mobile About */
+  .my-bio {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  
+  /* Mobile Projects */
+
+  /* Mobile Conact */
 }
 
 html {
@@ -39,11 +62,10 @@ nav .line {
   font-family: 'Arimo', sans-serif;
 }
 
-.navlink a {
+a {
   text-decoration: none;
   color: inherit;
 }
-/*  */
 
 /* Content */
 .content {
@@ -54,23 +76,42 @@ nav .line {
   place-items: center;
 }
 
-.blue,
-.green,
-.yellow {
+.about,
+.projects,
+.contact {
+  display: grid;
   z-index: 1;
   min-width: 85vw;
+  max-width: 85vw;
   min-height: 90vh;
+  font-family: 'Arimo', sans-serif;
+  place-items: center;
 }
 
-.blue {
+/* About */
+.about {
   background-color: lightblue;
+  grid-template-columns: 1fr 1fr;
 }
 
-.green {
+.my-bio {
+  margin: 2vw;
+  font-size: 0.85rem;
+}
+.my-bio::selection {
+  color: lightblue;
+  background-color: white;
+}
+
+/* Projects */
+.projects {
   background-color :lightgreen;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.yellow {
+/* Contact */
+.contact {
   background-color :lightyellow;
+  grid-template-columns: 1fr;
 }
 /*  */
