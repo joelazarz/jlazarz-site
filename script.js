@@ -14,10 +14,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   // Nav Line Animation //
-  const nameLink = document.querySelector("#nav > div:nth-child(1)");
-  const aboutLink = document.querySelector("#nav > div:nth-child(3) > a");
-  const projectsLink = document.querySelector("#nav > div:nth-child(5) > a");
-  const contactLink = document.querySelector("#nav > div:nth-child(7) > a");
+  const nameLink = document.querySelector("#nav > a:nth-child(1)");
+  const aboutLink = document.querySelector("#nav > a:nth-child(3)");
+  const projectsLink = document.querySelector("#nav > a:nth-child(5)");
+  const contactLink = document.querySelector("#nav > a:nth-child(7)");
   
   const navLineOne = document.querySelector("#nav > div:nth-child(2)");
   const navLineTwo = document.querySelector("#nav > div:nth-child(4)");

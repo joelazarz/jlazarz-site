@@ -56,15 +56,12 @@ nav .line {
   transition: all 1200ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.navlink {
+nav a {
+  text-decoration: none;
+  color: inherit;
   padding: 0.5rem;
   font-size: 0.8rem;
   font-family: 'Arimo', sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 /* Content */
