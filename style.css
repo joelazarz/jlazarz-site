@@ -3,6 +3,7 @@
 
   /* Mobile Nabvar */
   nav {
+    /* background-color: white; */
     z-index: 100 !important;
   }
   
@@ -32,7 +33,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.wrap {
+body {
   position: absolute;
 }
 
@@ -91,18 +92,29 @@ nav a {
   grid-template-columns: 1fr 1fr;
 }
 
+.my-picture {
+  margin: 1em;
+  width: 75%;
+  opacity: 0.7;
+  height: auto;
+}
+
+.greeting {
+  height: 1em;
+}
+
 .my-bio {
-  margin: 2vw;
+  margin: 4vw;
   font-size: 0.85rem;
 }
-.my-bio::selection {
+.my-bio *::selection {
   color: lightblue;
   background-color: white;
 }
 
 /* Projects */
 .projects {
-  background-color :lightgreen;
+  background-color:lightgreen;
   grid-template-columns: 1fr 1fr 1fr;
 }
 

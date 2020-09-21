@@ -1,5 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+  // Type animation 
+  let i = 0;
+  const txt = `Hi, I'm Joe Lazarz`;
+  
+  function typeWriter() {
+    if (i < txt.length) {
+      document.querySelector(".greeting").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    }
+  }
+
+  window.onload = function(){
+    setTimeout(typeWriter, 1000);
+  };
+
   // Nav vis toggle //
   const navDisplay = function(e) {
     const nav = document.getElementById('nav')
