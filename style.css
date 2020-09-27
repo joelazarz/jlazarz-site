@@ -79,7 +79,7 @@ nav a {
   z-index: 1;
   min-width: 85vw;
   max-width: 85vw;
-  min-height: 90vh;
+  min-height: 80vh;
   font-family: 'Arimo', sans-serif;
   place-items: center;
 }
@@ -105,7 +105,7 @@ nav a {
   margin: 4vw;
   font-size: 0.85rem;
 }
-.my-bio *::selection {
+.my-bio ::selection {
   color: lightblue;
   background-color: white;
 }
@@ -119,6 +119,30 @@ nav a {
 /* Contact */
 .contact {
   background-color :lightyellow;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
 }
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form 
+#name,
+#email,
+#message,
+#submit {
+  font-family: 'Arimo', sans-serif;
+  font-size: 0.8em;
+  border: none;
+  resize: none;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+input:invalid,
+textarea:invalid {
+  box-shadow: none;
+}
+
 /*  */
