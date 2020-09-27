@@ -27,30 +27,36 @@
   
   <!-- Site Content -->
   <div class="content" title="Site Content">
+      <!-- About -->
     <div class="about" id="about" title="About">
       <img src="./public/joe-lazarz-for-web.png" alt="Joe Lazarz" class="my-picture"> 
+
       <div class="my-bio">
         <h1 class="greeting"></h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet expedita esse magni aliquam? Deleniti inventore, atque ex consectetur, minima cum facere voluptates in tempora quis dolor nemo laboriosam impedit cupiditate magni dolorem necessitatibus illum soluta eaque distinctio voluptate? Commodi reprehenderit quos corporis sunt! Sit nesciunt quidem odit cumque voluptates libero pariatur, expedita unde nobis, minima sapiente eveniet debitis rerum aliquid veniam ipsum minus quaerat culpa? Voluptatibus, numquam maiores veritatis officiis accusantium excepturi laboriosam perspiciatis iure porro commodi quibusdam voluptatem eum, modi, delectus fugiat quos a. In voluptatum exercitationem fugit non. Voluptate ducimus facere nisi corrupti, a explicabo facilis earum dignissimos.</p>
+      </div>
 
-        </div>
       <div class="my-description">My description / Skills</div>
+
       <div class="my-links">My Links</div>
     </div>
     
+      <!-- Projects -->
     <div class="projects" id="projects" title="Projects">
       <div class="hello-world">Hello green!</div>
       <div class="hello-world">Hello green!</div>
       <div class="hello-world">Hello green!</div>
     </div>
     
+      <!-- Contact -->
     <div class="contact" id="contact" title="Contact">
-      <form id="contact-form" name="contact-form">
-        <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Name" required>
-        <input type="email" name="email" id="email" value="" tabindex="1" placeholder="Email" required>
-        <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
+      <form id="contact-form" name="contact-form" method="POST" data-netlify="true">
+        <input type="text" name="name" id="name" tabindex="0" placeholder="Name" required>
+        <input type="email" name="email" id="email" tabindex="0" placeholder="Email" required>
+        <textarea name="message" id="message" cols="30" rows="5" tabindex="0" placeholder="Message" required></textarea>
         <input type="submit" id="submit" value="Send">
       </form>
+
       <div class="hello-world">Hello yellow!</div>
     </div>
   </div>

@@ -119,12 +119,13 @@ nav a {
 /* Contact */
 .contact {
   background-color :lightyellow;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
+  place-items: center;
 }
 
 #contact-form 
@@ -134,6 +135,7 @@ nav a {
 #submit {
   font-family: 'Arimo', sans-serif;
   font-size: 0.8em;
+  width: 60vw;
   border: none;
   resize: none;
   padding: 1em;
