@@ -28,7 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('mousemove', navDisplay);
 
-
   // Nav Line Animation //
   const nameLink = document.querySelector("#nav > a:nth-child(1)");
   const aboutLink = document.querySelector("#nav > a:nth-child(3)");
@@ -48,7 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   nameLink.addEventListener('click', clickName);
 
-  
   // Nav line animation / About 
   const clickAbout = () => {
     navLineOne.setAttribute('style', 'flex-grow: 1');
@@ -69,6 +67,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Nav line animation / Contact
   contactLink.addEventListener('click', clickProjects)
-
 
 });
