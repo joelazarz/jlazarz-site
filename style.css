@@ -1,7 +1,12 @@
+a:visited {
+  color: black;
+}
+
 @media only screen and (max-width: 768px) {
   /* Mobile Nabvar */
   nav {
-    /* background-color: white; */
+    position: fixed;
+    background-color: white;
     z-index: 100 !important;
   }
   
@@ -37,7 +42,8 @@ body {
 
 /* Navbar */
 nav {
-  z-index: 0;
+  z-index: 100;
+  top: 0px;
   position: fixed;
   left: 10px;
   right: 10px;
@@ -48,6 +54,7 @@ nav {
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  background-color: white;
 }
 
 nav .line {
@@ -68,7 +75,7 @@ nav a {
   display: grid;
   margin-top: 6vw;
   margin-bottom: 6vw;
-  width: 100vw;
+  width: 98.5vw;
   place-items: center;
 }
 
@@ -79,7 +86,7 @@ nav a {
   z-index: 1;
   min-width: 85vw;
   max-width: 85vw;
-  min-height: 80vh;
+  /* min-height: 60vh; */
   font-family: 'Arimo', sans-serif;
   place-items: center;
 }
@@ -88,6 +95,53 @@ nav a {
 .about {
   background-color: lightblue;
   grid-template-columns: 1fr 1fr;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#skills > div > svg {
+  height: 3em;
+  width: 3em;
+  fill: black;
+}
+
+.skill-space {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 0.5em;
+  align-items: center;
+  font-size: 12px;
+}
+
+#links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#links > div > a > svg {
+  height: 3em;
+  width: 3em;
+  fill: black;
+}
+
+.link-space > a {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  padding: 0.5em;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.link-space > div:hover > a > svg > path {
+  fill: white;
 }
 
 .my-picture {
@@ -102,7 +156,7 @@ nav a {
 }
 
 .my-bio {
-  margin: 4vw;
+  margin: 0em 3em;
   font-size: 0.85rem;
 }
 .my-bio ::selection {
@@ -113,7 +167,21 @@ nav a {
 /* Projects */
 .projects {
   background-color:lightgreen;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-space {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  text-align: center;
+  place-items: center;
+}
+
+.project-img {
+  width:80%;
+  height: auto;
+  border: 3px white solid;
 }
 
 /* Contact */

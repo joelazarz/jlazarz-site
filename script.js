@@ -16,18 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 1000);
   };
 
-  // Nav vis toggle //
-  const navDisplay = function(e) {
-    const nav = document.getElementById('nav')
-    if (e.clientY <= 40) {
-      nav.setAttribute("style", "z-index: 100;");
-    } else {
-      nav.setAttribute("style", "z-index: 0;");
-    }
-  };
-
-  document.addEventListener('mousemove', navDisplay);
-
   // Nav Line Animation //
   const nameLink = document.querySelector("#nav > a:nth-child(1)");
   const aboutLink = document.querySelector("#nav > a:nth-child(3)");
@@ -66,6 +54,34 @@ window.addEventListener('DOMContentLoaded', () => {
   projectsLink.addEventListener('click', clickProjects);
 
   // Nav line animation / Contact
-  contactLink.addEventListener('click', clickProjects)
+  contactLink.addEventListener('click', clickProjects);
+
+  // Form Submission //
+  const contactForm = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+  
+    const formData = new FormData(contactForm);
+
+    fetch(contactForm.getAttribute('action'), {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(res => {
+      if (res) {
+        contactForm.reset();
+        success.innerHTML = '<span>Thank You!</span>';
+        setTimeout(() => {
+          success.innerHTML = ''; 
+        }, 4000);
+      };
+    });
+  });
 
 });
