@@ -9,8 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
       document.querySelector(".greeting").innerHTML += txt.charAt(i);
       i++;
       setTimeout(typeWriter, 100);
-    }
-  }
+    };
+  };
 
   window.onload = function(){
     setTimeout(typeWriter, 1000);

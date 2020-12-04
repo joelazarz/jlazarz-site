@@ -70,6 +70,11 @@ nav a {
   font-family: 'Arimo', sans-serif;
 }
 
+nav a:hover {
+  color: grey;
+}
+
+
 /* Content */
 .content {
   display: grid;
@@ -107,6 +112,7 @@ nav a {
   height: 3em;
   width: 3em;
   fill: black;
+  margin-bottom: 10px;
 }
 
 .skill-space {
@@ -121,13 +127,14 @@ nav a {
 #links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
 }
 
 #links > div > a > svg {
   height: 3em;
   width: 3em;
   fill: black;
+  margin-bottom: 10px;
 }
 
 .link-space > a {
@@ -140,8 +147,9 @@ nav a {
   text-decoration: none;
 }
 
-.link-space > div:hover > a > svg > path {
-  fill: white;
+.link-space:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 0.25em;
 }
 
 .my-picture {
@@ -159,6 +167,11 @@ nav a {
   margin: 0em 3em;
   font-size: 0.85rem;
 }
+
+#bio-text {
+  line-height: 2em;
+}
+
 .my-bio ::selection {
   color: lightblue;
   background-color: white;
@@ -166,7 +179,7 @@ nav a {
 
 /* Projects */
 .projects {
-  background-color:lightgreen;
+  background-color:lightyellow;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -179,14 +192,14 @@ nav a {
 }
 
 .project-img {
-  width:80%;
+  width: 80%;
   height: auto;
   border: 3px white solid;
 }
 
 /* Contact */
 .contact {
-  background-color :lightyellow;
+  background-color : lightgreen;
   grid-template-columns: 1fr;
 }
 
@@ -194,6 +207,7 @@ nav a {
   display: flex;
   flex-direction: column;
   place-items: center;
+  margin: 3em 0em;
 }
 
 #contact-form 
@@ -205,6 +219,7 @@ nav a {
   font-size: 0.8em;
   width: 60vw;
   border: none;
+  border-radius: 0.25em;
   resize: none;
   padding: 1em;
   margin: 0.5em;
