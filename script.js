@@ -58,7 +58,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Form Submission //
   const contactForm = document.getElementById('contact-form');
-  const success = document.getElementById('form-success');
+  const submit = document.getElementById('submit');
+  const success = document.getElementById('success');
 
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
@@ -76,10 +77,12 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(res => {
       if (res) {
         contactForm.reset();
-        success.innerHTML = '<span>Thank You!</span>';
+        submit.style.display='none';
+        success.style.display='inline';
         setTimeout(() => {
-          success.innerHTML = ''; 
-        }, 4000);
+          success.style.display='none';
+          submit.style.display='inline';
+        }, 3000);
       };
     });
   });
