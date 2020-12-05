@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-
-  // Type animation 
+  // Greeting animation 
   let i = 0;
   const txt = `Hi, I'm Joe Lazarz`;
   
@@ -15,6 +14,21 @@ window.addEventListener('DOMContentLoaded', () => {
   window.onload = function(){
     setTimeout(typeWriter, 1000);
   };
+
+  // Nav Line Color //
+  const navLineColor = () => {
+    const line = document.querySelectorAll('.line');
+    const navLinks = document.querySelectorAll("#nav > a");
+    if (window.scrollY <= 200) {
+      line.forEach(el => el.style.borderColor = "black");
+      navLinks.forEach(el => el.style.fontSize = "80%");
+    } else {
+      line.forEach(el => el.style.borderColor = "white");
+      navLinks.forEach(el => el.style.fontSize = "70%");
+    };
+  };
+
+  document.addEventListener('scroll', navLineColor);
 
   // Nav Line Animation //
   const nameLink = document.querySelector("#nav > a:nth-child(1)");
@@ -86,5 +100,8 @@ window.addEventListener('DOMContentLoaded', () => {
       };
     });
   });
+
+  // Year for footer
+  document.getElementById("year").innerHTML = new Date().getFullYear();
 
 });
