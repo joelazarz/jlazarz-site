@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Greeting animation 
   let i = 0;
   const txt = `Hi, I'm Joe Lazarz`;
-  
+
   function typeWriter() {
     if (i < txt.length) {
       document.querySelector(".greeting").innerHTML += txt.charAt(i);
@@ -15,8 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(typeWriter, 1000);
   };
 
-  // Nav Line Color //
-  const navLineColor = () => {
+  // Nav Line color & font size //
+  const navLineScroll = () => {
     const line = document.querySelectorAll('.line');
     const navLinks = document.querySelectorAll("#nav > a");
     if (window.scrollY <= 200) {
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
   };
 
-  document.addEventListener('scroll', navLineColor);
+  document.addEventListener('scroll', navLineScroll);
 
   // Nav Line Animation //
   const nameLink = document.querySelector("#nav > a:nth-child(1)");
