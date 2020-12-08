@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const success = document.getElementById('success');
 
   const submitForm = (formData) => {
-    fetch(contactForm.getAttribute('action'), {
+    fetch('/#contact', {
       method: 'POST',
       headers: {
         'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
       body: new URLSearchParams(formData).toString()
     })
     .then(res => {
+      console.log(res)
       if (res) {
         contactForm.reset();
         submit.style.display='none';
@@ -103,8 +104,8 @@ window.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({
           email: email
         })
-      }).then(function(response) {
-        return response.json();
+      }).then(function(res) {
+        return res.json();
       });
   };
 
@@ -114,8 +115,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const formData = new FormData(contactForm);
     const email = formData.get('email');
 
-    submitForm(formData);
-    subscribeEmail(email);
+    Promise.all([submitForm(formData), subscribeEmail(email)]).then(() => {
+      console.log('Thank You!');
+    });
   });
 
   // Year for footer
