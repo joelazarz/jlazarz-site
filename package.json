@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/joelazarz/jlazarz-site#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "dotenv": "^8.2.0"
   }
 }

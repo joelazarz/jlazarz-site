@@ -75,11 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const submit = document.getElementById('submit');
   const success = document.getElementById('success');
 
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-  
-    const formData = new FormData(contactForm);
-
+  const submitForm = (formData) => {
     fetch(contactForm.getAttribute('action'), {
       method: 'POST',
       headers: {
@@ -99,6 +95,27 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 3000);
       };
     });
+  };
+
+  const subscribeEmail = (email) => {
+    fetch('/.netlify/functions/subscribe', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: email
+        })
+      }).then(function(response) {
+        return response.json();
+      });
+  };
+
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+  
+    const formData = new FormData(contactForm);
+    const email = formData.get('email');
+
+    submitForm(formData);
+    subscribeEmail(email);
   });
 
   // Year for footer
