@@ -98,10 +98,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const subscribeEmail = (email) => {
+  const subscribeEmail = (name, email) => {
     fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         body: JSON.stringify({
+          name: name,
           email: email
         })
       }).then(function(res) {
@@ -113,9 +114,10 @@ window.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
   
     const formData = new FormData(contactForm);
+    const name = formData.get('name');
     const email = formData.get('email');
 
-    Promise.all([submitForm(formData), subscribeEmail(email)]).then(() => {
+    Promise.all([submitForm(formData), subscribeEmail(name, email)]).then(() => {
       console.log('Thank You!');
     });
   });
