@@ -85,7 +85,6 @@ window.addEventListener('DOMContentLoaded', () => {
       body: new URLSearchParams(formData).toString()
     })
     .then(res => {
-      console.log(res)
       if (res) {
         contactForm.reset();
         submit.style.display='none';
@@ -100,14 +99,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const subscribeEmail = (name, email) => {
     fetch('/.netlify/functions/subscribe', {
-        method: 'POST',
-        body: JSON.stringify({
-          name: name,
-          email: email
-        })
-      }).then(function(res) {
-        return res.json();
-      });
+      method: 'POST',
+      body: JSON.stringify({
+        name: name,
+        email: email
+      })
+    });
   };
 
   contactForm.addEventListener('submit', e => {
