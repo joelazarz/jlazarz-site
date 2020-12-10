@@ -248,8 +248,23 @@ nav a {
 #contact-form {
   display: flex;
   flex-direction: column;
-  place-items: center;
   margin: 3em 0em;
+}
+
+/* hidden form labels */
+#contact-form > label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#contact-form > input {
+  place-items: center;
 }
 
 #contact-form 

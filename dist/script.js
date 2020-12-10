@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const aboutLink = document.querySelector("#nav > a:nth-child(3)");
   const projectsLink = document.querySelector("#nav > a:nth-child(5)");
   const contactLink = document.querySelector("#nav > a:nth-child(7)");
-  
+
   const navLineOne = document.querySelector("#nav > div:nth-child(2)");
   const navLineTwo = document.querySelector("#nav > div:nth-child(4)");
   const navLineThree = document.querySelector("#nav > div:nth-child(6)");
@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
-  
+
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
