@@ -174,11 +174,15 @@ nav a {
 
 .my-bio {
   margin: 1em 3em;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 #bio-text {
   line-height: 2em;
+}
+
+#bio-text > p {
+  margin: 0.5em 0;
 }
 
 .my-bio ::selection {
