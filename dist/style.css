@@ -173,12 +173,13 @@ nav a {
 }
 
 .my-bio {
-  margin: 1em 3em;
+  margin: 1em 5em 1em 3em;
   font-size: 0.75rem;
 }
 
 #bio-text {
   line-height: 2em;
+  word-wrap: break-word;
 }
 
 #bio-text > p {
