@@ -203,7 +203,7 @@ nav a {
 .project-space {
   display: flex;
   flex-direction: column;
-  margin-top: 2em;
+  margin-top: 1em;
   padding: 1em;
   text-align: center;
   place-items: center;
@@ -237,7 +237,6 @@ nav a {
 
 .project-detail {
   min-height: 20em;
-  max-height: 20em;
   width: 80%;
   font-size: 13px;
   text-align: start;
