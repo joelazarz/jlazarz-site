@@ -34,10 +34,18 @@
       <div class="my-bio">
         <h1 class="greeting"></h1>
         <div id="bio-text">
-          <p>I’m a software engineer with experience across modern web development stacks. I am motivated by improving people’s lives through highly detailed work and application software. At this point in my career, I deeply enjoy coding frontend experiences as well as backend functionality and find myself just as excited to implement middleware on an API route as I am to animate an SVG with CSS. </p>
-          <p>My journey into web development began at the Flatiron Schools’ software engineering immersive program. Prior to that, I worked in diverse settings from managing digital ad campaigns to dog-walking, contracted outdoor irrigation, and even making craft ice-cream. </p>
-          <p>I’ve had the privilege of working side-by-side with individuals from a wide range of different backgrounds and along the way, learned firsthand the importance of communication, adaptability, and determination. Lessons learned outside of the field of web development are lessons I’ll deeply value as I work with and learn from the many talented people in the tech industry.</p>
-          <p>In my free time, I love producing and DJing music, screen printing, spending time with friends and family, and being outdoors. </p>
+          <p>
+            I’m a software engineer with experience across modern web development stacks. I am motivated by improving people’s lives through highly detailed work and application software. At this point in my career, I enjoy coding frontend experiences as well as backend functionality and find myself just as excited to implement middleware on an API route as I am to animate an SVG with CSS.
+          </p>
+          <p>
+            My journey into web development began at the Flatiron Schools’ software engineering immersive program. Prior to that, I worked in diverse settings from managing digital ad campaigns to dog-walking, contracted outdoor irrigation, and even making craft ice-cream.
+          </p>
+          <p>
+            I’ve had the privilege of working side-by-side with individuals from a wide range of different backgrounds and along the way, learned firsthand the importance of communication, adaptability, and determination. Lessons learned outside of the field of web development are lessons I’ll deeply value as I work with and learn from the many talented people in the tech industry.
+          </p>
+          <p>
+            In my free time, I love producing and DJing music, screen printing, spending time with friends and family, and being outdoors.
+          </p>
         </div>
       </div>
 
@@ -108,6 +116,7 @@
     
       <!-- Projects -->
     <div class="projects" id="projects" title="Projects">
+
       <div class="project-space">
         <h1>Wavio Sampler</h1>
         <img src="./public/wavio-sampler-ss.png" alt="Wavio Sampler" class="project-img">
@@ -117,10 +126,10 @@
         </div>
         <div class="project-detail">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio reprehenderit eveniet nam deserunt architecto, laborum voluptatibus. Nulla asperiores necessitatibus maxime vitae laboriosam cumque nemo accusantium eos voluptas dignissimos voluptates ut numquam dolore facere dolorum et, placeat rerum blanditiis modi, expedita exercitationem quas quia voluptatum fugiat! Veritatis omnis id accusantium nisi.
+            After completing the first version, there were a number of improvements I felt could be made on the frontend and backend. Wavio Sampler introduces the ability to record live playback while triggering regions. The user is able to bank their recordings during a session. They can edit the recordings, sequence their recordings, as well as download recordings and sequences. Users also have the ability to load new samples while preserving the recordings they have banked. As in version one, users can also save regions within the waveforms that are accessible to other users through the database.
           </p>
           <ul>
-            <li>React front-end</li>
+            <li>React frontend</li>
             <li>Context API state-management</li>
             <li>Express REST API (Node.js backend)</li>
             <li>MongoDB</li>
@@ -128,8 +137,9 @@
           </ul>
         </div>
       </div>
+
       <div class="project-space">
-        <h1>Sampler</h1>
+        <h1>Sampler <span style='font-size: 0.5em'>(version 1)</span></h1>
         <img src="./public/sampler-ss.png" alt="Sampler" class="project-img">
         <div class="project-link-space">
           <a href="https://github.com/joelazarz/samplr-frontend" target="_blank" rel="noopener">Code</a>
@@ -137,20 +147,59 @@
         </div>
         <div class="project-detail">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio reprehenderit eveniet nam deserunt architecto, laborum voluptatibus. Nulla asperiores necessitatibus maxime vitae laboriosam cumque nemo accusantium eos voluptas dignissimos voluptates ut numquam dolore facere dolorum et.
+            Sampler is an interactive audio workstation for the browser. Users can upload an audio file and begin highlighting regions within the waveform. Regions can be triggered by the user for live playback while simultaneously adjusting the playback speed. If a user finds an interesting region of audio, they can save it to the database where other users are able to load it during their sessions.
           </p>
           <ul>
-            <li>React front-end</li>
+            <li>React frontend</li>
             <li>Redux state-management</li>
             <li>Ruby On Rails API (backend)</li>
             <li>Filestack file storage</li>
           </ul>
         </div>
       </div>
+
+      <div class="project-space">
+        <h1>Project Collaboration App</h1>
+        <img src="./public/collaborator-ss.png" alt="Collaborator" class="project-img">
+        <div class="project-link-space">
+          <a href="https://github.com/joelazarz/samplr-frontend" target="_blank" rel="noopener">Code</a>
+          <a href="" target="_blank">Demo</a>
+        </div>
+        <div class="project-detail">
+          <p>
+            This project collaboration app was pair programmed with another developer when both of us were introduced to React. The idea behind this application was to create a network for users to collaborate on projects together. Users can create projects that other users can join. Here they can create tasks and mark their progress on tasks by dragging and dropping them from to-do, to in progress, to completed. Users can also browse a feed of projects which allows them to discover projects that they might want to join. 
+          </p>
+          <ul>
+            <li>React frontend</li>
+            <li>Ruby On Rails API (backend)</li>
+            <li>Postgres database</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-space">
+        <h1>Field Recordings DB</h1>
+        <img src="./public/fieldrecordings-db-ss.png" alt="FieldRecordings-db" class="project-img">
+        <div class="project-link-space">
+          <a href="https://github.com/joelazarz/samplr-frontend" target="_blank" rel="noopener">Code</a>
+          <a href="" target="_blank">Demo</a>
+        </div>
+        <div class="project-detail">
+          <p>
+            Field Recordings DB is a social network formed around sharing field recordings. Users can upload and browse field recordings based on artist or location. This application was pair programmed with another developer when we were both introduced to Ruby on Rails.
+          </p>
+          <ul>
+            <li>Full Stack Ruby on Rails</li>
+            <li>ActiveStorage to handle file uploads</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
     
       <!-- Contact -->
     <div class="contact" id="contact" title="Contact">
+      <div id="contact-text">Thank you for stopping by. I’d love to hear from you. You can contact me by filling out the form below.</div>
       <form id="contact-form" name="contact-form" method="POST" action="/.netlify/functions/subscribe" data-netlify="true" netlify-honeypot="bot-field">
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" tabindex="0" placeholder="Name" required>
